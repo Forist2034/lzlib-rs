@@ -1,0 +1,9 @@
+[workspace]
+members = ["lzlib-sys"]
+resolver = "2"
+
+[workspace.package]
+readme = "README.md"
+license = "BSD-2-Clause"
+homepage = "https://github.com/Forist2034/lzlib-rs"
+repository = "https://github.com/Forist2034/lzlib-rs"

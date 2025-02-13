@@ -1,0 +1,23 @@
+[package]
+name = "lzlib-sys"
+version = "0.1.0+0.15"
+edition = "2021"
+description = "Low-level bindings to lzlib compression library"
+readme.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+links = "lzlib"
+include = [
+  "/src",
+  "build.rs",
+  "/lzlib/*.c",
+  "/lzlib/*.h",
+  "/lzlib/COPYING",
+  "/lzlib/COPYING.GPL",
+]
+
+[dependencies]
+
+[build-dependencies]
+cc = "1.2.12"
