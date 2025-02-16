@@ -1,0 +1,15 @@
+[package]
+name = "lzlib"
+version = "0.1.0"
+edition = "2021"
+description = "Lzip compression and decompression"
+readme.workspace = true
+license.workspace = true
+homepage.workspace = true
+repository.workspace = true
+
+[dependencies]
+lzlib-sys = { path = "../lzlib-sys", version = "0.1.0" }
+
+[dev-dependencies]
+paste = "1.0.15"

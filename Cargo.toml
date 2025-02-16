@@ -1,5 +1,5 @@
 [workspace]
-members = ["lzlib-sys"]
+members = [ "lzlib","lzlib-sys"]
 resolver = "2"
 
 [workspace.package]
