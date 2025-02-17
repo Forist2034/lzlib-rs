@@ -2,7 +2,7 @@ use std::io;
 
 use crate::Param;
 
-const BUF_SIZE: usize = 64 << 10;
+const BUF_SIZE: usize = 16384;
 
 struct CodecWriter<C, W> {
     codec: C,
@@ -33,7 +33,10 @@ impl<C: super::Codec, W: io::Write> io::Write for CodecWriter<C, W> {
         loop {
             match self.codec.lzip_write(buf) {
                 Ok(0) => self.write_buf()?,
-                Ok(n) => break Ok(n),
+                Ok(n) => {
+                    self.write_buf()?;
+                    break Ok(n);
+                }
                 Err(e) => break Err(io::Error::other(e)),
             }
         }
