@@ -81,7 +81,6 @@ impl Level {
 const KIB: u32 = 10;
 const MIB: u32 = 20;
 
-///
 #[derive(Debug, Clone, Copy)]
 pub struct Param {
     /** sets the dictionary size to be used, in bytes.
