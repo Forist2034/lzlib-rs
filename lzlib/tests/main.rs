@@ -143,4 +143,8 @@ mk_level_tests!(
     include_bytes!("./data/test.txt"),
     "./data/test.txt.lz"
 );
-mk_level_tests!(fox_lf, include_bytes!("./data/fox_lf"), "./data/fox_lf.lz");
+mk_level_tests!(
+    fox_lf,
+    include_bytes!("./data/fox_lf.txt"),
+    "./data/fox_lf.txt.lz"
+);
